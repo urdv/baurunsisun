@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="/assets/css/default.css">
+		<title>Hello, world!</title>
+	</head>
+	<body>
+	
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+				<h1 class="logo">
+					<a href="/">
+						<img src="/assets/images/img_logo.png" alt="">
+					</a>
+				</h1>
+				<button type="button" class="btn-nav">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav id="gnb">
+					<ul>
+						<li><a href="#ch1" data-scroll="ch1">입원시설</a></li>
+						<li><a href="#ch2" data-scroll="ch2">입원식사</a></li>
+						<li><a href="#ch3" data-scroll="ch3">입원안내</a></li>
+						<li><a href="#ch4" data-scroll="ch4">한방입원치료</a></li>
+						<li><a href="#ch5" data-scroll="ch5">오시는길</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<!-- Main -->
+		<main id="content">
+			<section id="ch1" class="section jumbotron">
+				<div class="v-align">
+					<div class="container">
+						<h3></h3>
+						<p></p>
+					</div>
+				</div>
+			</section>
+			<section id="ch2" class="section">
+				<div class="container">
+					<div style="height: 100vh; background-color: skyblue"></div>
+				</div>
+			</section>
+			<section id="ch3" class="section">
+				<div class="container">
+					<div style="height: 100vh; background-color: cadetblue"></div>
+				</div>
+			</section>
+			<section id="ch4" class="section">
+				<div class="container">
+					<div style="height: 100vh; background-color: darkblue"></div>
+				</div>
+			</section>
+			<section id="ch5" class="section">
+				<div class="container">
+					<div style="height: 100vh; background-color: saddlebrown"></div>
+				</div>
+			</section>
+		</main>
+		
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				
+			</div>
+		</footer>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			(function($){
+				// gnb open 관련
+				$(document).on('click', '.btn-nav', function(){
+					$(this).addClass('nav-close');
+					$('body').addClass('opened');
+				});
+				$(document).on('click', '.btn-nav.nav-close', function(){
+					$(this).removeClass('nav-close');
+					$('body').removeClass('opened');
+				});
+				
+				// header scrolled
+				$(window).on('scroll', function() {
+					if ($(this).scrollTop() > 0) {
+						$('body').addClass('scrolled');
+					} else {
+						$('body').removeClass('scrolled');
+					}
+				});
+				
+				// 높이값
+                var $link = $('#gnb > ul > li > a');
+				var $height;
+				$(window).on('load resize', function(){
+					$height = $('#header').height();
+				});
+				
+				// spy scroll 관련
+                $link.on('click',function(e){
+                    var target = $($(this).attr('href')); 
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - $height
+                    }, 400);
+                    $(this).parent().addClass('active');
+                    e.preventDefault();
+                });
+				
+				$(window).on('scroll',function(){
+                    findPosition();
+                });
+				
+				
+                function findPosition(){
+                    $('.section').each(function(){
+                        if( ($(this).offset().top - $(window).scrollTop() - $height) < 20 ){
+                            $link.parent().removeClass('active');
+                            $('#gnb').find('[data-scroll="'+ $(this).attr('id') +'"]').parent().addClass('active');
+                        }
+                    });
+                }
+
+                findPosition();
+				
+				// mobile gnb 메뉴 클릭했을때 메뉴 닫기
+				
+			})(jQuery);
+		</script>
+	</body>
+</html>

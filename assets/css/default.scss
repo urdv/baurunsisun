@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, etails, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+	margin: 0; padding: 0; border: 0; vertical-align: baseline; font-family: inherit;
+}
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+$md: "1024px";
+$lg: "1280px";
+
+@mixin transition($property: all, $duration: .15s, $timing: linear, $delay: 0s) {
+	-webkit-transition-property: $property;
+    transition-property: $property;
+	-webkit-transition-duration: $duration;
+    transition-duration: $duration;
+	-webkit-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+	-webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+@mixin noto() {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin gotham() {
+    font-family: 'Gotham', sans-serif;
+}
+
+body {
+	position: relative;
+	min-width: 360px;
+	width: 100%;
+	font-size: 14px;
+    color: #000;
+    @include noto();
+	word-break: keep-all;
+    font-weight: 400;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+}
+.container {
+    max-width: 1280px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+	padding: 0 20px;
+	@media(min-width: $md) {
+		padding: 0 40px;
+	}
+}
+.container-fluid {
+    width: 100%;
+	margin: 0 auto;
+    display: block;
+	padding: 0 20px;
+	@media(min-width: $md) {
+		padding: 0 40px;
+	}
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+hr {
+	display: block;
+	border: 0;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, select, textarea {
+    font-family: inherit;
+    outline: none !important;
+}
+a, button {
+    color: #202020;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    background: none;
+    &:hover {
+        color: #202020;
+    }
+}
+
+/* Header */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include transition();
+	.container {
+		position: relative;
+		padding: 11.75px 0;
+		.logo {
+			display: block;
+			width: 142px;
+			font-size: 0;
+			margin: 0 auto;
+			> a {
+				display: block;
+				background-image: url(/assets/images/logo.png);
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				@include transition();
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+		.btn-nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50px;
+			height: 50px;
+			display: block;
+			span {
+				display: block;
+				width: 20px;
+				height: 2px;
+				margin-left: auto;
+				margin-right: auto;
+				background-color: #fff;
+				@include transition();
+				& ~ span {
+					margin-top: 5px;
+				}
+			}
+			&.nav-close {
+				background-color: #2ad2c5;
+				span {
+					position: relative;
+					margin-top: 0 !important;
+					background-color: #fff !important;
+					&:nth-of-type(1) {
+						top: 2px;
+						transform: skewY(45deg);
+					}
+					&:nth-of-type(2) {
+						display: none;
+					}
+					&:nth-of-type(3) {
+						transform: skewY(-45deg);
+					}
+				}
+			}
+		}
+	}
+	#gnb {
+		position: absolute;
+		right: -100%;
+		top: 50px;
+		width: 180px;
+		height: 360px;
+		padding: 20px 30px;
+		@include transition();
+		background-color: rgba(#fff, .9);
+		> ul {
+			> li {
+				> a {
+					display: inline-block;
+					font-size: 20px;
+					color: #000;
+					font-weight: 400;
+					@include transition();
+				}
+				& ~ li {
+					margin-top: 30px;
+				}
+				&.active {
+					> a {
+						color: #2ad2c5;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: $md) {
+		padding: 60px 0;
+		.container {
+			overflow: hidden;
+			padding: 0 40px;
+			.logo {
+				display: inline-block;
+				width: 284px;
+				margin: 0;
+			}
+			.btn-nav {
+				display: none;
+			}
+			#gnb {
+				position: static;
+				float: right;
+				display: inline-block;
+				width: auto;
+				height: auto;
+				padding: 0;
+				background: none;
+				> ul {
+					font-size: 0;
+					> li {
+						display: inline-block;
+						vertical-align: top;
+						> a {
+							font-size: 20px;
+							color: #fff;
+							&:hover {
+								opacity: .7 !important;
+								color: #2ad2c5 !important;
+							}
+						}
+						& ~ li {
+							margin-top: 0;
+							margin-left: 40px;
+						}
+						&.active {
+							> a {
+								color: #2ad2c5 !important;
+								&:hover {
+									opacity: 1 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body {
+	background-color: rgba(#000, .7);
+	&.opened {
+		#header {
+			#gnb {
+				right: 0;
+			}
+		}
+	}
+	&.scrolled {
+		#header {
+			background-color: #fff;
+			.container {
+				.logo {
+					> a {
+						background-image: url(/assets/images/logo_type2.png);
+					}
+				}
+				.btn-nav {
+					span {
+						background-color: #000;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: $md) {
+		&.scrolled {
+			#header {
+				padding: 24px 0;
+				.container {
+					#gnb {
+						> ul {
+							> li {
+								padding: 17px 0;
+								> a {
+									color: #000;
+									&:hover {
+										color: #2ad2c5;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* jumbotron */
+.jumbotron {
+	display: table;
+	width: 100%;
+	height: 360px;
+	background-image: url(/assets/images/bg_jumbotron_sm.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	.v-align {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		.container {
+			
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

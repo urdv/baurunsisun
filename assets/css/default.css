@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/gotham");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, etails, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: inherit; }
+
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  position: relative;
+  min-width: 360px;
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Noto Sans KR', sans-serif;
+  word-break: keep-all;
+  font-weight: 400;
+  letter-spacing: -1px;
+  box-sizing: border-box; }
+  body *, body *::before, body *::after {
+    box-sizing: border-box; }
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 0 20px; }
+  @media (min-width: 1024px) {
+    .container {
+      padding: 0 40px; } }
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 0 20px; }
+  @media (min-width: 1024px) {
+    .container-fluid {
+      padding: 0 40px; } }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+hr {
+  display: block;
+  border: 0;
+  margin: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none !important; }
+
+a, button {
+  color: #202020;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  background: none; }
+  a:hover, button:hover {
+    color: #202020; }
+
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+  #header .container {
+    position: relative;
+    padding: 11.75px 0; }
+    #header .container .logo {
+      display: block;
+      width: 142px;
+      font-size: 0;
+      margin: 0 auto; }
+      #header .container .logo > a {
+        display: block;
+        background-image: url(/assets/images/logo.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        #header .container .logo > a img {
+          display: block;
+          width: 100%; }
+    #header .container .btn-nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      display: block; }
+      #header .container .btn-nav span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        #header .container .btn-nav span ~ span {
+          margin-top: 5px; }
+      #header .container .btn-nav.nav-close {
+        background-color: #2ad2c5; }
+        #header .container .btn-nav.nav-close span {
+          position: relative;
+          margin-top: 0 !important;
+          background-color: #fff !important; }
+          #header .container .btn-nav.nav-close span:nth-of-type(1) {
+            top: 2px;
+            transform: skewY(45deg); }
+          #header .container .btn-nav.nav-close span:nth-of-type(2) {
+            display: none; }
+          #header .container .btn-nav.nav-close span:nth-of-type(3) {
+            transform: skewY(-45deg); }
+  #header #gnb {
+    position: absolute;
+    right: -100%;
+    top: 50px;
+    width: 180px;
+    height: 360px;
+    padding: 20px 30px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    background-color: rgba(255, 255, 255, 0.9); }
+    #header #gnb > ul > li > a {
+      display: inline-block;
+      font-size: 20px;
+      color: #000;
+      font-weight: 400;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s; }
+    #header #gnb > ul > li ~ li {
+      margin-top: 30px; }
+    #header #gnb > ul > li.active > a {
+      color: #2ad2c5; }
+  @media (min-width: 1024px) {
+    #header {
+      padding: 60px 0; }
+      #header .container {
+        overflow: hidden;
+        padding: 0 40px; }
+        #header .container .logo {
+          display: inline-block;
+          width: 284px;
+          margin: 0; }
+        #header .container .btn-nav {
+          display: none; }
+        #header .container #gnb {
+          position: static;
+          float: right;
+          display: inline-block;
+          width: auto;
+          height: auto;
+          padding: 0;
+          background: none; }
+          #header .container #gnb > ul {
+            font-size: 0; }
+            #header .container #gnb > ul > li {
+              display: inline-block;
+              vertical-align: top; }
+              #header .container #gnb > ul > li > a {
+                font-size: 20px;
+                color: #fff; }
+                #header .container #gnb > ul > li > a:hover {
+                  opacity: .7 !important;
+                  color: #2ad2c5 !important; }
+              #header .container #gnb > ul > li ~ li {
+                margin-top: 0;
+                margin-left: 40px; }
+              #header .container #gnb > ul > li.active > a {
+                color: #2ad2c5 !important; }
+                #header .container #gnb > ul > li.active > a:hover {
+                  opacity: 1 !important; } }
+
+body {
+  background-color: rgba(0, 0, 0, 0.7); }
+  body.opened #header #gnb {
+    right: 0; }
+  body.scrolled #header {
+    background-color: #fff; }
+    body.scrolled #header .container .logo > a {
+      background-image: url(/assets/images/logo_type2.png); }
+    body.scrolled #header .container .btn-nav span {
+      background-color: #000; }
+  @media (min-width: 1024px) {
+    body.scrolled #header {
+      padding: 24px 0; }
+      body.scrolled #header .container #gnb > ul > li {
+        padding: 17px 0; }
+        body.scrolled #header .container #gnb > ul > li > a {
+          color: #000; }
+          body.scrolled #header .container #gnb > ul > li > a:hover {
+            color: #2ad2c5; } }
+
+/* jumbotron */
+.jumbotron {
+  display: table;
+  width: 100%;
+  height: 360px;
+  background-image: url(/assets/images/bg_jumbotron_sm.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+  .jumbotron .v-align {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+
+/*# sourceMappingURL=default.css.map */
