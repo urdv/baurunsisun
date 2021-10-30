@@ -168,13 +168,20 @@
 					} else {
 						$('body').removeClass('scrolled');
 					}
+                    // 최상단 일때 gnb active 모두 제거
+                    if ($(this).scrollTop() < jumboHeight) {
+						$('#gnb > ul > li').removeClass('active');
+					}
 				});
 				
-				// 높이값
+				// 높이 구하기
                 var $link = $('#gnb > ul > li > a');
 				var $height;
+                var jumboHeight;
+                
 				$(window).on('load resize', function(){
 					$height = $('#header').height();
+                    jumboHeight = $('.jumbotron').height();
 				});
 				
 				// spy scroll 관련
