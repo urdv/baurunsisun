@@ -35,32 +35,61 @@
 		
 		<!-- Main -->
 		<main id="content">
-			<section id="ch1" class="section jumbotron">
+			<section class="jumbotron">
 				<div class="v-align">
 					<div class="container">
-						<h3></h3>
-						<p></p>
+						<p>회복에만 집중하실 수 있도록 쾌적하고 안락하게</p>
+						<h3>바른시선한의원 입원실</h3>
 					</div>
+				</div>
+			</section>
+			<section id="ch1" class="section">
+				<div class="container">
+				    <div class="section-header">
+				        <h3>바른시선 입원시설</h3>
+				        <p>교통사고 및 수술환자들의 편의를 생각한 쾌적한 설계</p>
+				    </div>
+					<div style="height: 100vh; background-color: skyblue"></div>
 				</div>
 			</section>
 			<section id="ch2" class="section">
 				<div class="container">
-					<div style="height: 100vh; background-color: skyblue"></div>
+				    <div class="section-header white">
+				        <h3>바른시선 입원식사</h3>
+				        <p>바른시선은 환자의 빠른 쾌유를 바라는 마음으로 개개인의 식단 관리에 최선을 다하고 있습니다.</p>
+				    </div>
+					<div style="height: 100vh; background-color: cadetblue"></div>
 				</div>
 			</section>
 			<section id="ch3" class="section">
 				<div class="container">
-					<div style="height: 100vh; background-color: cadetblue"></div>
+				    <div class="section-header white">
+				        <h3>입원안내</h3>
+				    </div>
+					<div style="height: 100vh; background-color: darkblue"></div>
 				</div>
+				<article class="faq">
+				    <div class="article-header">
+				        <h3>교통사고 치료 프로그램 FAQ</h3>
+				    </div>
+				</article>
 			</section>
 			<section id="ch4" class="section">
 				<div class="container">
-					<div style="height: 100vh; background-color: darkblue"></div>
+				    <div class="section-header">
+				        <h3>한방입원치료</h3>
+				        <p>한방입원치료는 통원치료에 비해 보다 집중적으로 치료가 진행되므로 빠른 효과와 치료 기간 단축을 기대할 수 있습니다.<br> 바른시선한의원은 다양한 맞춤 한의치료로 환자 분 개개인의 몸 상태에 따라 폭 넓게 적용하고 있습니다.</p>
+				    </div>
+					<div style="height: 100vh; background-color: saddlebrown"></div>
 				</div>
 			</section>
 			<section id="ch5" class="section">
 				<div class="container">
-					<div style="height: 100vh; background-color: saddlebrown"></div>
+				    <div class="section-header">
+				        <h3>오시는 길</h3>
+				        <address>경기도 고양시 일산동구 중앙로 1036 고양터미널 6층</address>
+				    </div>
+					<div style="height: 100vh; background-color: orange"></div>
 				</div>
 			</section>
 		</main>
@@ -68,7 +97,54 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="container">
-				
+				<h2>바른시선한의원</h2>
+				<address>경기도 고양시 일산동구 중앙로 1036, 306, 307, 604, 605호<br> (백석동, 베스트 고양터미널)</address>
+				<ul>
+				    <li>
+				        <dl>
+				            <dt>대표자</dt>
+				            <dd>김종석</dd>
+				        </dl>
+				    </li>
+				    <li>
+				        <dl>
+				            <dt>사업자등록번호</dt>
+				            <dd>463-13-01419</dd>
+				        </dl>
+				    </li>
+				    <li>
+				        <dl>
+				            <dt>대표전화</dt>
+				            <dd><a href="tel:0318181575">031-818-1575</a></dd>
+				        </dl>
+				    </li>
+				    <li>
+				        <dl>
+				            <dt>FAX</dt>
+				            <dd>031-818-6157</dd>
+				        </dl>
+				    </li>
+				</ul>
+				<p class="copyright">COPYRIGHT © 2019 <b>BARUNSISUN</b> <span>ALL RIGHTS RESERVED.</span></p>
+			</div>
+			<div class="quick-link">
+			    <ul>
+			        <li>
+			            <a href="http://pf.kakao.com/_fXqxcxl/chat" target="_blank">
+			                <img src="/assets/images/ico_quick01.png" alt="">
+			            </a>
+			        </li>
+			        <li>
+			            <a href="https://map.naver.com/v5/entry/place/788108420?c=14114192.2152947,4529126.6414432,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt" target="_blank">
+			                <img src="/assets/images/ico_quick02.png" alt="">
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:;" class="btn-top">
+			                <img src="/assets/images/ico_quick03.png" alt="">
+			            </a>
+			        </li>
+			    </ul>
 			</div>
 		</footer>
 		
@@ -128,7 +204,18 @@
                 findPosition();
 				
 				// mobile gnb 메뉴 클릭했을때 메뉴 닫기
-				
+				$(document).on('click', '#gnb > ul > li > a', function(){
+                    $('body').removeClass('opened');
+                    $('.btn-nav').removeClass('nav-close');
+                });
+                
+                // btn-top 관련
+                $(document).on('click', '.btn-top', function(){
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 400);
+                });
+                
 			})(jQuery);
 		</script>
 	</body>
