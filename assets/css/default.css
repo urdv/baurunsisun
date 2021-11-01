@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/gotham");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, etails, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
@@ -123,6 +124,7 @@ a, button {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 200;
   width: 100%;
   -webkit-transition-property: all;
   transition-property: all;
@@ -284,6 +286,13 @@ body.scrolled #header {
         body.scrolled #header .container #gnb > ul > li > a:hover {
           color: #2ad2c5; } }
 
+/* section */
+.section {
+  padding-bottom: 50px; }
+  @media (min-width: 1024px) {
+    .section {
+      padding-bottom: 100px; } }
+
 /* jumbotron */
 .jumbotron {
   overflow: hidden;
@@ -320,6 +329,711 @@ body.scrolled #header {
     .jumbotron {
       height: 900px;
       background-image: url(/assets/images/bg_jumbotron_lg.png); } }
+
+/* youtube */
+.responsive-embed {
+  position: relative;
+  display: block;
+  max-width: 1010px;
+  margin: 0 auto; }
+  .responsive-embed:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%; }
+  .responsive-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block; }
+
+/* facilities */
+.facilities .advantage {
+  margin-top: 40px; }
+  .facilities .advantage > ol > li .list-header {
+    position: relative;
+    padding-left: 80px;
+    padding-bottom: 20px; }
+    .facilities .advantage > ol > li .list-header strong {
+      position: absolute;
+      top: -12px;
+      left: 0;
+      display: inline-block;
+      font-size: 60px;
+      color: #2ad2c5;
+      font-weight: bold;
+      letter-spacing: -5px; }
+    .facilities .advantage > ol > li .list-header b {
+      display: inline-block;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+      line-height: 24px;
+      padding: 5px 15px;
+      background-color: #373737; }
+    .facilities .advantage > ol > li .list-header p {
+      font-size: 14px;
+      color: #000;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 15px; }
+      .facilities .advantage > ol > li .list-header p br {
+        display: none; }
+    .facilities .advantage > ol > li .list-header > figure {
+      display: none; }
+    .facilities .advantage > ol > li .list-header.center {
+      padding-left: 0;
+      text-align: center; }
+      .facilities .advantage > ol > li .list-header.center strong {
+        position: static;
+        display: block; }
+      .facilities .advantage > ol > li .list-header.center b {
+        display: inline-block;
+        margin-top: 15px; }
+  .facilities .advantage > ol > li > .visible-lg {
+    display: none; }
+  .facilities .advantage > ol > li > ul {
+    font-size: 0; }
+    .facilities .advantage > ol > li > ul > li {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%; }
+      .facilities .advantage > ol > li > ul > li img {
+        width: 100%;
+        display: block;
+        box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.2); }
+        .facilities .advantage > ol > li > ul > li img.visible-lg {
+          display: none; }
+      .facilities .advantage > ol > li > ul > li:nth-of-type(1) {
+        padding-right: 5px; }
+      .facilities .advantage > ol > li > ul > li:nth-of-type(2) {
+        padding-left: 5px; }
+  .facilities .advantage > ol > li .video {
+    display: block !important;
+    max-width: 1010px;
+    margin: 0 auto; }
+    .facilities .advantage > ol > li .video video {
+      display: block;
+      width: 100%; }
+  .facilities .advantage > ol > li ~ li {
+    margin-top: 40px; }
+  .facilities .advantage > ol > li.advantage-4 .list-header b {
+    display: block;
+    width: 165px; }
+@media (min-width: 1024px) {
+  .facilities .advantage {
+    max-width: 944px;
+    margin: 100px auto 0; }
+    .facilities .advantage > ol > li {
+      font-size: 0; }
+      .facilities .advantage > ol > li .list-header {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        padding: 0; }
+        .facilities .advantage > ol > li .list-header strong {
+          position: relative;
+          top: -23px;
+          display: block;
+          font-size: 120px; }
+        .facilities .advantage > ol > li .list-header b {
+          font-size: 28px;
+          line-height: 62px;
+          padding: 0 30px;
+          letter-spacing: -2px;
+          margin-top: -5px; }
+        .facilities .advantage > ol > li .list-header p {
+          font-size: 20px;
+          color: #000;
+          line-height: 30px;
+          margin-top: 30px;
+          letter-spacing: -1.5px; }
+          .facilities .advantage > ol > li .list-header p br {
+            display: block; }
+        .facilities .advantage > ol > li .list-header > figure {
+          display: block; }
+          .facilities .advantage > ol > li .list-header > figure img {
+            width: 100%;
+            box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.2); }
+        .facilities .advantage > ol > li .list-header.center {
+          width: 100%; }
+      .facilities .advantage > ol > li > .visible-lg {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top; }
+        .facilities .advantage > ol > li > .visible-lg img {
+          width: 100%;
+          box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.2); }
+      .facilities .advantage > ol > li .video {
+        margin-top: 50px; }
+      .facilities .advantage > ol > li ~ li {
+        margin-top: 100px; }
+        .facilities .advantage > ol > li ~ li > ul {
+          display: none; }
+      .facilities .advantage > ol > li.advantage-1 > ul {
+        margin-top: 30px; }
+        .facilities .advantage > ol > li.advantage-1 > ul > li:nth-of-type(1) {
+          padding-right: 20px; }
+        .facilities .advantage > ol > li.advantage-1 > ul > li:nth-of-type(2) {
+          padding-left: 20px; }
+        .facilities .advantage > ol > li.advantage-1 > ul > li img {
+          display: none; }
+          .facilities .advantage > ol > li.advantage-1 > ul > li img.visible-lg {
+            width: 100%;
+            display: block; }
+      .facilities .advantage > ol > li.advantage-4 .list-header b {
+        width: auto;
+        letter-spacing: -3px; }
+      .facilities .advantage > ol > li:nth-of-type(1) .list-header, .facilities .advantage > ol > li:nth-of-type(4) .list-header {
+        padding-right: 20px; }
+      .facilities .advantage > ol > li:nth-of-type(1) > .visible-lg, .facilities .advantage > ol > li:nth-of-type(4) > .visible-lg {
+        padding-left: 20px; }
+      .facilities .advantage > ol > li:nth-of-type(3) .list-header, .facilities .advantage > ol > li:nth-of-type(5) .list-header {
+        padding-left: 20px; }
+      .facilities .advantage > ol > li:nth-of-type(3) > .visible-lg, .facilities .advantage > ol > li:nth-of-type(5) > .visible-lg {
+        padding-right: 20px; }
+      .facilities .advantage > ol > li:nth-of-type(3) .list-header figure {
+        margin-top: 57px; }
+      .facilities .advantage > ol > li:nth-of-type(4) .list-header figure {
+        margin-top: 27px; }
+      .facilities .advantage > ol > li:nth-of-type(5) .list-header figure {
+        margin-top: 56px; } }
+@media (min-width: 1280px) {
+  .facilities .advantage {
+    max-width: 100%;
+    width: 1200px;
+    margin-top: 130px; }
+    .facilities .advantage > ol > li .list-header strong {
+      top: 0; }
+    .facilities .advantage > ol > li .list-header b {
+      font-size: 36px;
+      margin-top: 30px; }
+    .facilities .advantage > ol > li .list-header p {
+      margin-top: 35px; }
+    .facilities .advantage > ol > li.advantage-1 > ul {
+      margin-top: 33px; }
+      .facilities .advantage > ol > li.advantage-1 > ul > li:nth-of-type(1) {
+        padding-right: 28px; }
+      .facilities .advantage > ol > li.advantage-1 > ul > li:nth-of-type(2) {
+        padding-left: 28px; }
+    .facilities .advantage > ol > li:nth-of-type(1) .list-header, .facilities .advantage > ol > li:nth-of-type(4) .list-header {
+      padding-right: 28px; }
+    .facilities .advantage > ol > li:nth-of-type(1) > .visible-lg, .facilities .advantage > ol > li:nth-of-type(4) > .visible-lg {
+      padding-left: 28px; }
+    .facilities .advantage > ol > li:nth-of-type(3) .list-header, .facilities .advantage > ol > li:nth-of-type(5) .list-header {
+      padding-left: 28px; }
+    .facilities .advantage > ol > li:nth-of-type(3) > .visible-lg, .facilities .advantage > ol > li:nth-of-type(5) > .visible-lg {
+      padding-right: 28px; }
+    .facilities .advantage > ol > li:nth-of-type(2) ~ li .list-header figure {
+      margin-top: 103px !important; } }
+
+/* meal */
+.meal {
+  background-color: #464646; }
+  .meal .section-content {
+    overflow: hidden; }
+    .meal .section-content .meal-slider {
+      width: calc(100% + 10px);
+      margin: 0 -5px; }
+      .meal .section-content .meal-slider .slick-list .slick-track .slick-slide {
+        outline: none;
+        padding: 0 5px; }
+        .meal .section-content .meal-slider .slick-list .slick-track .slick-slide figure img {
+          display: block;
+          width: 100%; }
+      .meal .section-content .meal-slider .slick-dots {
+        display: block;
+        width: 100%;
+        font-size: 0;
+        text-align: center;
+        margin-top: 20px; }
+        .meal .section-content .meal-slider .slick-dots > li {
+          display: inline-block;
+          vertical-align: top; }
+          .meal .section-content .meal-slider .slick-dots > li > button {
+            display: block;
+            width: 10px;
+            height: 10px;
+            outline: none;
+            text-indent: -99999999px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #000; }
+          .meal .section-content .meal-slider .slick-dots > li.slick-active > button {
+            background-color: #2ad2c5; }
+      .meal .section-content .meal-slider .slick-arrow {
+        display: none !important; }
+  @media (min-width: 1024px) {
+    .meal .container .meal-slider {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px; }
+      .meal .container .meal-slider .slick-list .slick-track .slick-slide {
+        padding: 0 10px; }
+      .meal .container .meal-slider .slick-dots {
+        display: none !important; }
+      .meal .container .meal-slider .slick-arrow {
+        display: block !important;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        width: 24px;
+        height: 36px;
+        outline: none;
+        text-indent: -9999999px;
+        background-image: url(/assets/images/btn_slick_arrow.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 24px auto; }
+        .meal .container .meal-slider .slick-arrow.slick-prev {
+          left: 0;
+          transform: translateY(-50%); }
+        .meal .container .meal-slider .slick-arrow.slick-next {
+          right: 0;
+          transform: translateY(-50%) rotate(180deg); } }
+  @media (min-width: 1280px) {
+    .meal .container .meal-slider {
+      padding: 0 45px; }
+      .meal .container .meal-slider .slick-list .slick-track .slick-slide {
+        padding: 0 5px; } }
+
+/* hospitalization */
+.hospitalization article {
+  padding-bottom: 50px; }
+.hospitalization .guide {
+  text-align: center;
+  background-image: url(/assets/images/bg_hospitalization_sm.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+  .hospitalization .guide .article-content {
+    max-width: 756px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    background-color: rgba(0, 0, 0, 0.4); }
+    .hospitalization .guide .article-content strong {
+      font-size: 20px;
+      color: #fff;
+      font-weight: bold; }
+      .hospitalization .guide .article-content strong span {
+        display: inline-block;
+        color: #fff115;
+        padding-bottom: 8px;
+        background-image: url(/assets/images/bg_line.png);
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: 100% auto; }
+    .hospitalization .guide .article-content > p {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 15px;
+      letter-spacing: -1.5px; }
+.hospitalization .faq .article-content > ul > li > dl > dt {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  line-height: 20px;
+  padding-left: 35px; }
+  .hospitalization .faq .article-content > ul > li > dl > dt:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    content: 'Q';
+    letter-spacing: 0;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #2ad2c5; }
+.hospitalization .faq .article-content > ul > li > dl > dd {
+  position: relative;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000;
+  font-weight: 400;
+  padding-left: 35px;
+  margin-top: 15px; }
+  .hospitalization .faq .article-content > ul > li > dl > dd:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    content: 'A';
+    letter-spacing: 0;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #636363; }
+.hospitalization .faq .article-content > ul > li ~ li {
+  margin-top: 40px; }
+@media (min-width: 1024px) {
+  .hospitalization article {
+    padding-bottom: 100px; }
+  .hospitalization .guide {
+    background-image: url(/assets/images/bg_hospitalization_md.png); }
+    .hospitalization .guide .article-content {
+      padding: 50px 0; }
+      .hospitalization .guide .article-content strong {
+        font-size: 36px; }
+        .hospitalization .guide .article-content strong span {
+          padding-bottom: 10px;
+          padding-right: 10px; }
+      .hospitalization .guide .article-content p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 10px; }
+  .hospitalization .faq .article-content > ul > li > dl > dt {
+    font-size: 20px;
+    line-height: 40px;
+    padding-left: 50px; }
+    .hospitalization .faq .article-content > ul > li > dl > dt:before {
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      line-height: 38px; }
+  .hospitalization .faq .article-content > ul > li > dl > dd {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 10px;
+    padding: 5px 0 5px 50px; }
+    .hospitalization .faq .article-content > ul > li > dl > dd:before {
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      line-height: 38px; }
+  .hospitalization .faq .article-content > ul > li ~ li {
+    margin-top: 55px; } }
+@media (min-width: 1280px) {
+  .hospitalization .guide {
+    background-image: url(/assets/images/bg_hospitalization_lg.png); } }
+
+/* korean-medicine */
+.korean-medicine {
+  text-align: center;
+  background-color: #f7f7f7; }
+  .korean-medicine .section-content > ul {
+    font-size: 0;
+    width: calc(100% + 10px);
+    margin: 0 -5px; }
+    .korean-medicine .section-content > ul > li {
+      display: inline-block;
+      width: 33.3333333333%;
+      padding: 0 5px; }
+      .korean-medicine .section-content > ul > li > .figure {
+        position: relative;
+        border: 1px solid #a6a6a5; }
+        .korean-medicine .section-content > ul > li > .figure img {
+          display: block;
+          width: 100%; }
+        .korean-medicine .section-content > ul > li > .figure .details {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 5px; }
+          .korean-medicine .section-content > ul > li > .figure .details .v-align {
+            display: table;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(191, 191, 190, 0.6); }
+            .korean-medicine .section-content > ul > li > .figure .details .v-align > b {
+              display: table-cell;
+              font-size: 15px;
+              color: #fff;
+              font-weight: bold;
+              vertical-align: middle; }
+      .korean-medicine .section-content > ul > li:nth-of-type(3) ~ li {
+        margin-top: 10px; }
+  @media (min-width: 1024px) {
+    .korean-medicine .section-content > ul {
+      width: calc(100% + 16px);
+      margin: 0 -8px; }
+      .korean-medicine .section-content > ul > li {
+        padding: 0 8px; }
+        .korean-medicine .section-content > ul > li > .figure .details {
+          padding: 10px; }
+          .korean-medicine .section-content > ul > li > .figure .details .v-align b {
+            font-size: 30px; }
+        .korean-medicine .section-content > ul > li:nth-of-type(3) ~ li {
+          margin-top: 16px; } }
+  @media (min-width: 1280px) {
+    .korean-medicine .section-content > ul {
+      width: 900px;
+      margin: 0 auto; }
+      .korean-medicine .section-content > ul > li > .figure img {
+        max-width: 100%; } }
+
+/* location */
+.location {
+  padding-bottom: 0; }
+  .location .section-content .map-area {
+    max-width: 940px;
+    margin: 0 auto; }
+    .location .section-content .map-area .maps #daumRoughmapContainer1635734221440 {
+      width: 100% !important;
+      height: 210px !important; }
+      .location .section-content .map-area .maps #daumRoughmapContainer1635734221440 .wrap_map {
+        width: 100% !important;
+        height: 210px !important; }
+    .location .section-content .map-area .btn-area {
+      padding: 20px 0; }
+      .location .section-content .map-area .btn-area > a {
+        position: relative;
+        display: block;
+        padding: 10px;
+        padding-left: 40px;
+        border-radius: 5px; }
+        .location .section-content .map-area .btn-area > a:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 40px;
+          height: 100%;
+          content: '';
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 17.5px auto; }
+        .location .section-content .map-area .btn-area > a > dl {
+          overflow: hidden;
+          border-left: 1px solid #5d3333; }
+          .location .section-content .map-area .btn-area > a > dl > dt {
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5d3333;
+            line-height: 27px;
+            padding-left: 10px; }
+          .location .section-content .map-area .btn-area > a > dl > dd {
+            float: right;
+            color: #5d3333; }
+            .location .section-content .map-area .btn-area > a > dl > dd b {
+              font-weight: bold;
+              color: #5d3333;
+              line-height: 27px; }
+        .location .section-content .map-area .btn-area > a.btn-contact {
+          background-color: #2ad2c5; }
+          .location .section-content .map-area .btn-area > a.btn-contact:before {
+            background-image: url(/assets/images/ico_contact.png); }
+          .location .section-content .map-area .btn-area > a.btn-contact > dl {
+            border-color: rgba(255, 255, 255, 0.4); }
+            .location .section-content .map-area .btn-area > a.btn-contact > dl > dt {
+              color: #fff; }
+            .location .section-content .map-area .btn-area > a.btn-contact > dl > dd b {
+              font-size: 22px;
+              color: #fff;
+              font-family: 'Gotham', sans-serif; }
+        .location .section-content .map-area .btn-area > a.btn-kakao {
+          background-color: #fddf3a; }
+          .location .section-content .map-area .btn-area > a.btn-kakao:before {
+            background-image: url(/assets/images/ico_kakao.png); }
+          .location .section-content .map-area .btn-area > a.btn-kakao > dl > dd b {
+            font-size: 20px; }
+        .location .section-content .map-area .btn-area > a ~ a {
+          margin-top: 5px; }
+  .location .section-content .public-transportation {
+    padding-bottom: 35px; }
+    .location .section-content .public-transportation > ul > li {
+      display: table;
+      width: 100%;
+      padding: 15px 0;
+      border-top: 1px solid #b7b7b7; }
+      .location .section-content .public-transportation > ul > li > div {
+        display: table-cell;
+        vertical-align: middle; }
+        .location .section-content .public-transportation > ul > li > div.icon {
+          width: 80px;
+          vertical-align: top; }
+          .location .section-content .public-transportation > ul > li > div.icon img {
+            width: 100%;
+            display: block; }
+        .location .section-content .public-transportation > ul > li > div.details {
+          padding-left: 20px; }
+          .location .section-content .public-transportation > ul > li > div.details > p {
+            font-size: 14px;
+            color: #000;
+            line-height: 20px;
+            font-weight: 400; }
+            .location .section-content .public-transportation > ul > li > div.details > p b {
+              display: block;
+              font-weight: bold; }
+          .location .section-content .public-transportation > ul > li > div.details > ul > li > dl {
+            font-size: 0; }
+            .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dt {
+              display: inline-block;
+              vertical-align: top;
+              font-size: 14px;
+              color: #cc4747;
+              font-weight: bold;
+              margin-right: 15px; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dt.type-1 {
+                color: #3baf20; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dt.type-2 {
+                color: #3d7abf; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dt.type-3 {
+                color: #d8b200; }
+            .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dd {
+              display: inline-block;
+              vertical-align: top;
+              font-size: 14px;
+              color: #000;
+              font-weight: 400; }
+          .location .section-content .public-transportation > ul > li > div.details > ul > li ~ li {
+            margin-top: 15px; }
+  .location .section-content .parking {
+    background-image: url(/assets/images/bg_parking_sm.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover; }
+    .location .section-content .parking .parking-guide {
+      padding: 40px 20px;
+      background-color: rgba(49, 117, 192, 0.8); }
+      .location .section-content .parking .parking-guide h4 {
+        font-size: 18px;
+        color: #fff;
+        font-weight: bold; }
+      .location .section-content .parking .parking-guide hr {
+        display: block;
+        width: 30px;
+        height: 1px;
+        margin: 15px 0;
+        border: 0;
+        background-color: #fff; }
+      .location .section-content .parking .parking-guide b {
+        font-size: 15px;
+        display: block;
+        color: #fff;
+        font-weight: 500; }
+      .location .section-content .parking .parking-guide .attention {
+        position: relative;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        font-weight: 400;
+        padding-left: 15px;
+        margin-top: 15px; }
+        .location .section-content .parking .parking-guide .attention:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '※'; }
+        .location .section-content .parking .parking-guide .attention ~ .attention {
+          margin-top: 0; }
+  @media (min-width: 1024px) {
+    .location .section-content .map-area .maps #daumRoughmapContainer1635734221440 {
+      height: 515px !important; }
+      .location .section-content .map-area .maps #daumRoughmapContainer1635734221440 .wrap_map {
+        height: 515px !important; }
+    .location .section-content .map-area .btn-area {
+      overflow: hidden;
+      padding: 60px 10px; }
+      .location .section-content .map-area .btn-area > a {
+        float: left;
+        width: calc(50% - 5px);
+        margin-right: 10px;
+        padding: 10px 25px 10px 70px;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        .location .section-content .map-area .btn-area > a:hover {
+          opacity: .8; }
+        .location .section-content .map-area .btn-area > a:before {
+          width: 70px;
+          background-size: auto; }
+        .location .section-content .map-area .btn-area > a > dl > dt {
+          font-size: 22px;
+          line-height: 54px;
+          padding-left: 20px; }
+        .location .section-content .map-area .btn-area > a > dl > dd b {
+          line-height: 54px; }
+        .location .section-content .map-area .btn-area > a.btn-contact > dl > dd b {
+          font-size: 30px; }
+        .location .section-content .map-area .btn-area > a.btn-kakao {
+          margin: 0; }
+          .location .section-content .map-area .btn-area > a.btn-kakao > dl > dd b {
+            font-size: 25px; }
+    .location .section-content .public-transportation {
+      padding-bottom: 20px; }
+      .location .section-content .public-transportation > ul > li {
+        padding: 30px 0; }
+        .location .section-content .public-transportation > ul > li > div.icon {
+          width: 160px;
+          vertical-align: middle; }
+        .location .section-content .public-transportation > ul > li > div.details {
+          padding-left: 40px; }
+          .location .section-content .public-transportation > ul > li > div.details p {
+            font-size: 22px; }
+            .location .section-content .public-transportation > ul > li > div.details p b {
+              display: inline; }
+          .location .section-content .public-transportation > ul > li > div.details > ul {
+            overflow: hidden; }
+            .location .section-content .public-transportation > ul > li > div.details > ul > li {
+              float: left;
+              width: 250px; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dt {
+                font-size: 22px;
+                line-height: 40px;
+                margin-right: 25px; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li > dl > dd {
+                font-size: 22px;
+                line-height: 40px; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li ~ li {
+                margin-top: 0; }
+              .location .section-content .public-transportation > ul > li > div.details > ul > li:nth-of-type(4), .location .section-content .public-transportation > ul > li > div.details > ul > li:nth-of-type(6) {
+                clear: left; }
+    .location .section-content .parking {
+      overflow: hidden;
+      background-image: url(/assets/images/bg_parking_md.png); }
+      .location .section-content .parking .parking-guide {
+        width: 50%;
+        float: right;
+        padding: 55px 40px; }
+        .location .section-content .parking .parking-guide h4 {
+          font-size: 30px; }
+        .location .section-content .parking .parking-guide hr {
+          width: 40px;
+          margin: 20px 0; }
+        .location .section-content .parking .parking-guide b {
+          font-size: 22px; }
+        .location .section-content .parking .parking-guide .attention {
+          font-size: 18px;
+          line-height: 25px;
+          padding-left: 20px; } }
+  @media (min-width: 1280px) {
+    .location {
+      padding-bottom: 100px; }
+      .location .section-content .map-area {
+        max-width: 1010px; }
+        .location .section-content .map-area .btn-area {
+          padding-left: 40px;
+          padding-right: 40px; }
+      .location .section-content .public-transportation > ul > li > div.details > ul > li {
+        width: 295px; }
+      .location .section-content .parking {
+        background-image: url(/assets/images/bg_parking_lg.png); } }
 
 /* footer */
 #footer {
