@@ -548,6 +548,8 @@
                         if( ($(this).offset().top - $(window).scrollTop() - $height) < 20 ){
                             $link.parent().removeClass('active');
                             $('#gnb').find('[data-scroll="'+ $(this).attr('id') +'"]').parent().addClass('active');
+                        } else {
+                            $('#gnb').find('[data-scroll="'+ $(this).attr('id') +'"]').parent().removeClass('active');
                         }
                     });
                 }

@@ -404,7 +404,7 @@ body.scrolled #header {
   width: 100%;
   height: 450px;
   text-align: center;
-  background-image: url(/assets/images/sub/bg_jumbo_sm.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66BqKz4.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
@@ -425,7 +425,7 @@ body.scrolled #header {
   @media (min-width: 1024px) {
     .jumbotron {
       height: 900px;
-      background-image: url(/assets/images/sub/bg_jumbo_lg.png); }
+      background-image: url(http://homemaker.mvwiz.com/_files/6b66BqH9z.png); }
       .jumbotron .container img {
         width: 284px; }
       .jumbotron .container h3 {
@@ -436,7 +436,7 @@ body.scrolled #header {
           display: none; } }
 
 .article-1 {
-  background-image: url(/assets/images/sub/bg_1.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66BpJ6C.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
@@ -487,13 +487,13 @@ body.scrolled #header {
       .article-1 .article-content ul > li:nth-of-type(2) ~ li {
         margin-top: 50px; }
       .article-1 .article-content ul > li:nth-of-type(1) .item {
-        background-image: url(/assets/images/sub/bg_circle1.png); }
+        background-image: url(http://homemaker.mvwiz.com/_files/6b66Bqtvf.png); }
       .article-1 .article-content ul > li:nth-of-type(2) .item {
-        background-image: url(/assets/images/sub/bg_circle2.png); }
+        background-image: url(http://homemaker.mvwiz.com/_files/6b66BquWU.png); }
       .article-1 .article-content ul > li:nth-of-type(3) .item {
-        background-image: url(/assets/images/sub/bg_circle3.png); }
+        background-image: url(http://homemaker.mvwiz.com/_files/6b66Bqwed.png); }
       .article-1 .article-content ul > li:nth-of-type(4) .item {
-        background-image: url(/assets/images/sub/bg_circle4.png); }
+        background-image: url(http://homemaker.mvwiz.com/_files/6b66BqxzP.png); }
   .article-1 .article-content .summary-area {
     margin-top: 50px; }
   @media (min-width: 1024px) {
@@ -531,7 +531,7 @@ body.scrolled #header {
       margin-top: 100px; } }
 
 .article-3 {
-  background-image: url(/assets/images/sub/bg_3.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66BpQCj.png);
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover; }
@@ -607,7 +607,7 @@ body.scrolled #header {
           margin-top: 30px; } }
 
 .article-4 {
-  background-image: url(/assets/images/sub/bg_4.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66BpYoZ.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 10% 0; }
@@ -977,10 +977,10 @@ body.scrolled #header {
               margin-top: 30px; }
         .article-5 .article-content > ol > li:nth-of-type(even) {
           background: none;
-          background-image: url(/assets/images/sub/bg_pattern.png); } }
+          background-image: url(http://homemaker.mvwiz.com/_files/6b66BqY3F.png); } }
 
 .article-6 {
-  background-image: url(/assets/images/sub/bg_6.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66Bp_FH.png);
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover; }
@@ -1074,7 +1074,7 @@ body.scrolled #header {
     width: 100%; } }
 
 .article-8 {
-  background-image: url(/assets/images/sub/bg_8.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66Bq6LA.png);
   background-repeat: no-repeat;
   background-position: 70% 0;
   background-size: cover; }
@@ -1194,7 +1194,7 @@ body.scrolled #header {
     margin-top: 80px; } }
 
 .article-10 {
-  background-image: url(/assets/images/sub/bg_10_sm.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66Bqgos.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
@@ -1235,7 +1235,7 @@ body.scrolled #header {
       margin-top: 5px; }
   @media (min-width: 1024px) {
     .article-10 {
-      background-image: url(/assets/images/sub/bg_10_lg.png); }
+      background-image: url(http://homemaker.mvwiz.com/_files/6b66BqcVk.png); }
       .article-10 .article-header {
         padding-bottom: 100px; }
       .article-10 .article-content img {
@@ -1443,7 +1443,7 @@ body.scrolled #header {
           margin-top: 40px; } }
 
 .article-14 {
-  background-image: url(/assets/images/sub/bg_14.png);
+  background-image: url(http://homemaker.mvwiz.com/_files/6b66BqqS7.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
